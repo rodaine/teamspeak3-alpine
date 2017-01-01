@@ -1,4 +1,4 @@
-# Teamspeak3 (Alpine Linux) Docker Image <br>[![Docker Automated Build](https://img.shields.io/docker/automated/rodaine/teamspeak3-alpine.svg)](https://hub.docker.com/r/rodaine/teamspeak3-alpine/)
+# Teamspeak3 (Alpine Linux) Docker Image [![Docker Automated Build](https://img.shields.io/docker/automated/rodaine/teamspeak3-alpine.svg)](https://hub.docker.com/r/rodaine/teamspeak3-alpine/)
 
 _A Teamspeak 3 Server built on Alpine Linux (using glibc)_
 
@@ -20,6 +20,7 @@ docker run -d \
 	-p 9987:9987/udp \
 	rodaine/teamspeak3-alpine
 ```
+
 
 The other ports (10011 for ServerQuery and 30033 for FileManager) can be exposed
 individually as well in this manner, or all ports can be exposed with `-P`, 
@@ -44,6 +45,7 @@ docker run -d \
 	rodaine/teamspeak3-alpine
 ```
 
+
 ### TS3 Startup Flags
 
 TS3 permits a bunch of flags at startup to customize the behavior of the server.
@@ -57,6 +59,7 @@ docker run -d \
 	rodaine/teamspeak3-alpine \
 	inifile=/data/ts3server.ini
 ```
+
 
 Refer to the documentation included in your TS3 Server release for all the 
 available flags.

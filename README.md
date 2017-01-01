@@ -1,4 +1,4 @@
-# Teamspeak3 (Alpine Linux) Docker Image
+# Teamspeak3 (Alpine Linux) Docker Image <br>[![Docker Automated Build](https://img.shields.io/docker/automated/rodaine/teamspeak3-alpine.svg)](https://hub.docker.com/r/rodaine/teamspeak3-alpine/)
 
 _A Teamspeak 3 Server built on Alpine Linux (using glibc)_
 

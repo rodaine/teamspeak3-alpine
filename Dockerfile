@@ -5,12 +5,12 @@ EXPOSE 9987/udp 10011 30033
 
 ENV \
 	TS_DIR="/opt/teamspeak" \
-	TS_RELEASE="http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2" \
-	TS_SHA="19ccd8db5427758d972a864b70d4a1263ebb9628fcc42c3de75ba87de105d179" \
+	TS_RELEASE="http://dl.4players.de/ts/releases/3.3.1/teamspeak3-server_linux_amd64-3.3.1.tar.bz2" \
+	TS_SHA="b3891341a9ff4c4b6b0173ac57f1d64d4752550c95eeb26d2518ac2f5ca9fbc1" \
 	TS_ARTIFACT="teamspeak.tar.bz2" \
 	TS_DATA="/data"
 
-RUN apk --update add tar \
+RUN apk --update add tar ca-certificates \
 	&& mkdir -p "${TS_DIR}" \
 	&& wget "${TS_RELEASE}" -O "${TS_ARTIFACT}" \
 	&& if [ $(sha256sum "${TS_ARTIFACT}" | cut -d" " -f 0) != $TS_SHA ]; then echo "CHECKSUM FAILED"; exit 1; fi \
